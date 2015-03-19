@@ -102,10 +102,10 @@ def create_vts(args):
     '''
 
     # writing .vts file header
-    # making sure file extension is correct
-    if '.' in args.loadout and not args.loadout.endswith('.vts'):
-        args.loadout = args.loadout[:args.loadout.find('.')]
+    # making sure file extension is correct.
+    if not args.loadout.endswith('.vts'):
         args.loadout = args.loadout + '.vts'
+    print "Output file will be called: " + args.loadout
 
     loadout = open(args.loadout, 'w')
     loadout.write('<VTKFile type="StructuredGrid" version="0.1" byte_order="LittleEndian">\n')
@@ -127,9 +127,10 @@ def create_vts(args):
 
 def create_vtu(args):
     # making sure file extension is correct
-    if '.' in args.loadout and not args.loadout.endswith('.vtu'):
-        args.loadout = args.loadout[:args.loadout.find('.')]
-        args.loadout = args.loadout + '.vtu'
+    if not args.loadout.endswith('.vtu'):
+        args.loadout = args.loadout + '.vtu'	
+    print "Output file will be called: " + args.loadout
+
 
     # writing .vtu file header
     loadout = open(args.loadout, 'w')
