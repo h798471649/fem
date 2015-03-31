@@ -27,14 +27,14 @@ Installation
 ============
  * You can locally clone this repository:
  ```
- git clone git@github.com:Duke-Ultrasound/fem.git
+ git clone git@github.com:mlp6/fem.git
  ```
 
  This approach will work if you have an [SSH
  key](https://help.github.com/articles/generating-ssh-keys) uploaded to GitHub.
  If not, then you can also clone the reportory using:
  ```
- git clone https://github.com/Duke-Ultrasound/fem.git
+ git clone https://github.com/mlp6/fem.git
  ```
 
  * Add the fem subdirectories to your Matlab path.  One approach is to add the
@@ -79,26 +79,14 @@ detailed descriptions of the available scripts.
 Coordinate & Unit Conventions
 =============================
 
- * The mesh (LS-DYNA) and Field II spatial axis conventions are different (this
-   is unfortunate, but maintained for legacy compatibility).
-
- * LS-DYNA and mesh-related tools use a rotated, right-hand rule coorindate
-   system: 
-   + Axial extends into -z, 
-   + Lateral extends into +y, 
-   + Elevation extends into -x.
-
- * LS-DYNA is run unitless, but scripts assume and scale quantitites assuming a
-   CGS unit system.
-
- * Field II tools a standard, right-hand rule coordinate system:
+ * The mesh (LS-DYNA) and Field II spatial axis conventions and units (MKS) are the same:
    + Axial extends into +z, 
    + Lateral extends into +x, 
    + Elevation extends into +y.
 
- * Field II internally uses MKS units, but scripts will specify units on the
-   inputs
-
+ * Earlier versions of the code for >10 years used a different coordinate and
+   unit system for the mesh and LS-DYNA-related components of the simulation,
+   so use caution when working with older simulations!!
 
 Testing
 =======
